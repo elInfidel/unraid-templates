@@ -51,13 +51,7 @@
 
     <Config Name="SERVICES" Default="" Description="A comma-delimited string of services to load."
         Type="Variable" Display="always"
-    >localstack</Config>
-
-    <Config Name="PYTHON_VERSION" Target="PYTHON_VERSION" Default="3.11.11" Mode="{3}"
-        Type="Variable" Display="advanced">3.11.11</Config>
-
-    <Config Name="USER" Target="USER" Default="localstack" Mode="{3}"
-        Type="Variable" Display="advanced">localstack</Config>
+    ></Config>
 
     <Config Name="LocalStack Gateway" Target="4566" Default="4566" Mode="tcp"
         Description="This is the main edge port for LocalStack. It acts as a gateway for most AWS services. When you interact with LocalStack using the AWS CLI or SDKs, you generally connect to this port."
