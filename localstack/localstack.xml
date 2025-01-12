@@ -1,0 +1,168 @@
+<?xml version="1.0"?>
+<Container version="2">
+
+    <Name>localstack</Name>
+
+    <Repository>localstack/localstack</Repository>
+
+    <Registry>https://hub.docker.com/r/localstack/localstack/</Registry>
+
+    <Network>bridge</Network>
+
+    <Shell>sh</Shell>
+
+    <Privileged>false</Privileged>
+
+    <Beta>False</Beta>
+
+    <Category>Cloud: Network:Web Other: Productivity:</Category>
+
+    <Date>2025-01-12</Date>
+
+    <Support>https://docs.localstack.cloud/getting-started/help-and-support/</Support>
+
+    <Project>https://www.localstack.cloud/</Project>
+
+    <Overview>
+        LocalStack is a cloud service emulator that runs in a single container on your laptop or in
+        your CI
+        environment. With LocalStack, you can run your AWS applications or Lambdas entirely on your
+        local machine without connecting to a remote cloud provider! Whether you are testing complex
+        CDK applications or Terraform configurations, or just beginning to learn about AWS services,
+        LocalStack helps speed up and simplify your testing and development workflow.
+
+        Connect to the application via console in unraid UI to create resources such as below.
+
+        $ awslocal s3api create-bucket --bucket sample-bucket
+        $ awslocal s3api list-buckets
+
+        For more information about this container visit https://www.localstack.cloud/
+    </Overview>
+
+    <Icon>https://avatars.githubusercontent.com/u/28732122?s=128</Icon>
+
+    <Config Name="Data" Target="/var/lib/localstack" Default="" Mode="rw"
+        Description="Application data and information stored via interaction with the service is saved here."
+        Type="Path" Display="always" />
+
+    <Config Name="Data" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw"
+        Description="Mounting the Docker socket /var/run/docker.sock as a volume is required for the Lambda service. Check out the Lambda providers documentation for more information"
+        Type="Path" Display="always" />
+
+    <Config Name="SERVICES" Default="" Description="A comma-delimited string of services to load."
+        Type="Variable" Display="always"
+    >localstack</Config>
+
+    <Config Name="PYTHON_VERSION" Target="PYTHON_VERSION" Default="3.11.11" Mode="{3}"
+        Type="Variable" Display="advanced">3.11.11</Config>
+
+    <Config Name="USER" Target="USER" Default="localstack" Mode="{3}"
+        Type="Variable" Display="advanced">localstack</Config>
+
+    <Config Name="LocalStack Gateway" Target="4566" Default="4566" Mode="tcp"
+        Description="This is the main edge port for LocalStack. It acts as a gateway for most AWS services. When you interact with LocalStack using the AWS CLI or SDKs, you generally connect to this port."
+        Type="Port" Display="always" Required="true">4566</Config>
+
+    <Config Name="External Services Port 01" Target="4510" Default="4510" Mode="tcp"
+        Type="Port" Display="advanced">4510</Config>
+    <Config Name="External Services Port 02" Target="4511" Default="4511" Mode="tcp"
+        Type="Port" Display="advanced">4511</Config>
+    <Config Name="External Services Port 03" Target="4512" Default="4512" Mode="tcp"
+        Type="Port" Display="advanced">4512</Config>
+    <Config Name="External Services Port 04" Target="4513" Default="4513" Mode="tcp"
+        Type="Port" Display="advanced">4513</Config>
+    <Config Name="External Services Port 05" Target="4514" Default="4514" Mode="tcp"
+        Type="Port" Display="advanced">4514</Config>
+    <Config Name="External Services Port 06" Target="4515" Default="4515" Mode="tcp"
+        Type="Port" Display="advanced">4515</Config>
+    <Config Name="External Services Port 07" Target="4516" Default="4516" Mode="tcp"
+        Type="Port" Display="advanced">4516</Config>
+    <Config Name="External Services Port 08" Target="4517" Default="4517" Mode="tcp"
+        Type="Port" Display="advanced">4517</Config>
+    <Config Name="External Services Port 09" Target="4518" Default="4518" Mode="tcp"
+        Type="Port" Display="advanced">4518</Config>
+    <Config Name="External Services Port 10" Target="4519" Default="4519" Mode="tcp"
+        Type="Port" Display="advanced">4519</Config>
+    <Config Name="External Services Port 11" Target="4520" Default="4520" Mode="tcp"
+        Type="Port" Display="advanced">4520</Config>
+    <Config Name="External Services Port 12" Target="4521" Default="4521" Mode="tcp"
+        Type="Port" Display="advanced">4521</Config>
+    <Config Name="External Services Port 13" Target="4522" Default="4522" Mode="tcp"
+        Type="Port" Display="advanced">4522</Config>
+    <Config Name="External Services Port 14" Target="4523" Default="4523" Mode="tcp"
+        Type="Port" Display="advanced">4523</Config>
+    <Config Name="External Services Port 15" Target="4524" Default="4524" Mode="tcp"
+        Type="Port" Display="advanced">4524</Config>
+    <Config Name="External Services Port 16" Target="4525" Default="4525" Mode="tcp"
+        Type="Port" Display="advanced">4525</Config>
+    <Config Name="External Services Port 17" Target="4526" Default="4526" Mode="tcp"
+        Type="Port" Display="advanced">4526</Config>
+    <Config Name="External Services Port 18" Target="4527" Default="4527" Mode="tcp"
+        Type="Port" Display="advanced">4527</Config>
+    <Config Name="External Services Port 19" Target="4528" Default="4528" Mode="tcp"
+        Type="Port" Display="advanced">4528</Config>
+    <Config Name="External Services Port 20" Target="4529" Default="4529" Mode="tcp"
+        Type="Port" Display="advanced">4529</Config>
+    <Config Name="External Services Port 21" Target="4530" Default="4530" Mode="tcp"
+        Type="Port" Display="advanced">4530</Config>
+    <Config Name="External Services Port 22" Target="4531" Default="4531" Mode="tcp"
+        Type="Port" Display="advanced">4531</Config>
+    <Config Name="External Services Port 23" Target="4532" Default="4532" Mode="tcp"
+        Type="Port" Display="advanced">4532</Config>
+    <Config Name="External Services Port 24" Target="4533" Default="4533" Mode="tcp"
+        Type="Port" Display="advanced">4533</Config>
+    <Config Name="External Services Port 25" Target="4534" Default="4534" Mode="tcp"
+        Type="Port" Display="advanced">4534</Config>
+    <Config Name="External Services Port 26" Target="4535" Default="4535" Mode="tcp"
+        Type="Port" Display="advanced">4535</Config>
+    <Config Name="External Services Port 27" Target="4536" Default="4536" Mode="tcp"
+        Type="Port" Display="advanced">4536</Config>
+    <Config Name="External Services Port 28" Target="4537" Default="4537" Mode="tcp"
+        Type="Port" Display="advanced">4537</Config>
+    <Config Name="External Services Port 29" Target="4538" Default="4538" Mode="tcp"
+        Type="Port" Display="advanced">4538</Config>
+    <Config Name="External Services Port 30" Target="4539" Default="4539" Mode="tcp"
+        Type="Port" Display="advanced">4539</Config>
+    <Config Name="External Services Port 31" Target="4540" Default="4540" Mode="tcp"
+        Type="Port" Display="advanced">4540</Config>
+    <Config Name="External Services Port 32" Target="4541" Default="4541" Mode="tcp"
+        Type="Port" Display="advanced">4541</Config>
+    <Config Name="External Services Port 33" Target="4542" Default="4542" Mode="tcp"
+        Type="Port" Display="advanced">4542</Config>
+    <Config Name="External Services Port 34" Target="4543" Default="4543" Mode="tcp"
+        Type="Port" Display="advanced">4543</Config>
+    <Config Name="External Services Port 35" Target="4544" Default="4544" Mode="tcp"
+        Type="Port" Display="advanced">4544</Config>
+    <Config Name="External Services Port 36" Target="4545" Default="4545" Mode="tcp"
+        Type="Port" Display="advanced">4545</Config>
+    <Config Name="External Services Port 37" Target="4546" Default="4546" Mode="tcp"
+        Type="Port" Display="advanced">4546</Config>
+    <Config Name="External Services Port 38" Target="4547" Default="4547" Mode="tcp"
+        Type="Port" Display="advanced">4547</Config>
+    <Config Name="External Services Port 39" Target="4548" Default="4548" Mode="tcp"
+        Type="Port" Display="advanced">4548</Config>
+    <Config Name="External Services Port 40" Target="4549" Default="4549" Mode="tcp"
+        Type="Port" Display="advanced">4549</Config>
+    <Config Name="External Services Port 41" Target="4550" Default="4550" Mode="tcp"
+        Type="Port" Display="advanced">4550</Config>
+    <Config Name="External Services Port 42" Target="4551" Default="4551" Mode="tcp"
+        Type="Port" Display="advanced">4551</Config>
+    <Config Name="External Services Port 43" Target="4552" Default="4552" Mode="tcp"
+        Type="Port" Display="advanced">4552</Config>
+    <Config Name="External Services Port 44" Target="4553" Default="4553" Mode="tcp"
+        Type="Port" Display="advanced">4553</Config>
+    <Config Name="External Services Port 45" Target="4554" Default="4554" Mode="tcp"
+        Type="Port" Display="advanced">4554</Config>
+    <Config Name="External Services Port 46" Target="4555" Default="4555" Mode="tcp"
+        Type="Port" Display="advanced">4555</Config>
+    <Config Name="External Services Port 47" Target="4556" Default="4556" Mode="tcp"
+        Type="Port" Display="advanced">4556</Config>
+    <Config Name="External Services Port 48" Target="4557" Default="4557" Mode="tcp"
+        Type="Port" Display="advanced">4557</Config>
+    <Config Name="External Services Port 49" Target="4558" Default="4558" Mode="tcp"
+        Type="Port" Display="advanced">4558</Config>
+    <Config Name="External Services Port 50" Target="4559" Default="4559" Mode="tcp"
+        Type="Port" Display="advanced">4559</Config>
+    <Config Name="External Services Port 52" Target="5678" Default="5678" Mode="tcp"
+        Type="Port" Display="advanced">5678</Config>
+</Container>
