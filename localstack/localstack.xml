@@ -36,6 +36,10 @@
         $ awslocal s3api create-bucket --bucket sample-bucket
         $ awslocal s3api list-buckets
 
+        You may then communicate with the edge port on 4566 (or as configured) to interact with the
+        services. Some services may generate seperate ports for communication. These can be found in
+        the documentation.
+
         For more information about this container visit https://www.localstack.cloud/
     </Overview>
 
