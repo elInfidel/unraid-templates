@@ -49,9 +49,9 @@
         Description="Application data and information stored via interaction with the service is saved here."
         Type="Path" Display="always" />
 
-    <Config Name="Data" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw"
+    <Config Name="Docker socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw"
         Description="Mounting the Docker socket /var/run/docker.sock as a volume is required for the Lambda service. Check out the Lambda providers documentation for more information"
-        Type="Path" Display="always" />
+        Type="Path" Display="advanced" />
 
     <Config Name="SERVICES" Default="" Description="A comma-delimited string of services to load."
         Type="Variable" Display="always"
