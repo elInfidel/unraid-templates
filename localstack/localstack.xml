@@ -45,7 +45,7 @@
 
     <Icon>https://avatars.githubusercontent.com/u/28732122?s=128</Icon>
 
-    <Config Name="Data" Target="/var/lib/localstack" Default="" Mode="rw"
+    <Config Name="Data" Target="/var/lib/localstack" Default="/mnt/user/appdata/localstack" Mode="rw"
         Description="Application data and information stored via interaction with the service is saved here."
         Type="Path" Display="always" />
 
